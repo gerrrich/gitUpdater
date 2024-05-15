@@ -29,7 +29,7 @@ def listen_events(service):
            f"{service['remote_branch_name']}...{service['local_branch_name']}"]
     result = subprocess.run(cmd, cwd=service["repository_folder"], capture_output=True, text=True)
 
-    output = result.stdout.strip()
+    output = result.stdout.strip()[0]
     print(f'!!!{output}!!!')
     if output != "0":
         update_code(service)
