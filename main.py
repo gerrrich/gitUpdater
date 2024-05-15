@@ -25,6 +25,8 @@ def update_code(service):
 
 # Слушаем события из GitHub
 def listen_events(service):
+    subprocess.run(['git', 'remote', 'update'], cwd=service["repository_folder"])
+
     cmd = ["git", "rev-list", "--count", "--left-right",
            f"{service['remote_branch_name']}...{service['local_branch_name']}"]
     result = subprocess.run(cmd, cwd=service["repository_folder"], capture_output=True, text=True)
