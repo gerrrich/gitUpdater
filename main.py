@@ -30,6 +30,7 @@ def listen_events(service):
     result = subprocess.run(cmd, cwd=service["repository_folder"], capture_output=True, text=True)
 
     output = result.stdout.strip()
+    print(f'!!!{output}!!!')
     if output != "0":
         update_code(service)
 
