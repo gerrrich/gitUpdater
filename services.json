@@ -1,7 +1,7 @@
 [
   {
     "service_name": "chat_bot.service",
-    "repository_folder": "/root/chat_bot",
+    "repository_folder": "/root/gerrich_chat_bot",
     "local_branch_name": "main",
     "remote_branch_name": "origin/main"
   }
